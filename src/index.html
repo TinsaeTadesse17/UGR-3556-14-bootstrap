@@ -1,48 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tinsae Tadesse</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <title>Tinsae Tadesse</title>
+  <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #5d556b;
+    }
+    
+    .navbar {
+        background-color: #cdbceb;
+        color: #ffffff; 
+    }
+
+    .navbar-toggler-icon {
+        color: #fff;
+    }
+
+    .navbar-toggler {
+      order: -1; 
+      background: none;
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      outline: none;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #9b59b6;
+    }
+
+    .section, .footer {
+      background-color: #5d556b; 
+      color: #ffffff; 
+    }
+
+    .section__img {
+      border: 8px solid #cdbceb; 
+    }
+
+    .footer__link {
+      color: #ffffff !important;
+    }
+
+    .footer__link:hover {
+      color: #cdbceb !important;
+    }
+
+    
+    .navbar-brand {
+      margin-right: auto; 
+    }
+    .navbar-brand img {
+      width: 50%; 
+    }
+
+    .navbar-nav {
+      margin-left: auto; 
+    }
+    @media (max-width: 768px) {
+            .navbar-toggler {
+                order: 0;
+                justify-content: right !important;
+                color:#fff; 
+                
+            }
+            
+        }
+   
+  </style>
 </head>
 <body>
 
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
     
-
-    <nav>
-        <img src="images/logo.png" alt="Logo">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-auto" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link text-light">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link text-light">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link text-light">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="skills.html" class="nav-link text-light">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link text-light">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <section>
-        <header>
-            <h1>Who is Tinsae?</h1>
-        </header>
-        <img src="images/image1.jpg" alt="Tinsae Tadesse">
-        <p>Web Developer | Software Engineer</p>
-        <p>Hello, I'm Tinsae Tadesse, a passionate web developer and software engineer. 
-        <br>I specialize in crafting unique, high-quality websites and applications that 
-        <br>not only meet but exceed client expectations.</p>
-        <audio controls>
-            <source src="audio/audio.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
-
-    <footer>
-        <p>Connnect with me!</p>
-        <div>
-            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+  <br><br><br><br><br><br>  
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="images/image1.jpg" class="img-fluid section__img" alt="Tinsae Tadesse">
         </div>
-    </footer>
+        <div class="col-md-8">
+          <h1 class="title is-3 text-light">Who is Tinsae?</h1>
+          <p>
+            <p class="section__p">Web Developer | Software Engineer</p>
+            <br><p class="section__p">Hello, I'm Tinsae Tadesse, a passionate web developer and software engineer. 
+            <br>I specialize in crafting unique, high-quality websites and applications that 
+            <br>not only meet but exceed client expectations.</p>
+            <audio controls class="content__audio">
+                <source src="audio/audio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br>
 
+  <footer class="footer mb-0">
+      <p>
+        Connect with me!
+      </p>
+      <div class="footer__icons">
+        <a class="footer__link" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a class="footer__link" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="footer__link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+        var navMenu = document.querySelector('.navbar-collapse');
+        navMenu.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
